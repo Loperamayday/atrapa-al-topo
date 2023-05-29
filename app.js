@@ -10,3 +10,5 @@ function cuadradoazar {
     mombredeclase.classlist.remove("topo");
   })
 }
+
+let posicionalazar = cuadrado [Math.floor (Math.random())]

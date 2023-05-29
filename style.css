@@ -20,4 +20,6 @@ h1, h2 {
 }
 
 .topo {
-  background-image: url("imagenes/topo.jpg");
+  background-image: url("topo.jpg");
+  background-size: cover;
+}
