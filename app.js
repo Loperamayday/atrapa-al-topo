@@ -7,9 +7,8 @@ let tiempoactual = tiempofaltante.textContent;
 
 function cuadroazar() {
   cuadro.forEach((nombredeclase) => {
-    nombredeclase.classlist.remove("topo");
+    nombredeclase.classList.remove("topo");
   });
-
   let posicionalazar = cuadro[Math.floor(Math.random() * 9)];
   posicionalazar.classList.add("topo");
 
@@ -21,7 +20,7 @@ cuadro.forEach((identificador) => {
     if (identificador.id === posiciontopo) {
       resultado = resultado + 1;
       puntaje.textContent = resultado;
-      posicionalazar = null;
+      posiciontopo = null;
     }
   });
 });
@@ -37,7 +36,9 @@ function cuentaregresiva() {
   if (tiempoactual === 0) {
     clearInterval(idtiempo);
     clearInterval(tiempotopo);
-    alert("se acabó el tiempo tu puntaje es" + resultado + "topos atrapados");
+    alert(
+      "se acabó el tiempo, tu puntaje fue de " + resultado + " topos atrapados"
+    );
   }
 }
 let idtiempo = setInterval(cuentaregresiva, 1000);
